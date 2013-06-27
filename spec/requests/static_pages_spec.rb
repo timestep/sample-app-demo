@@ -41,4 +41,16 @@ describe "Static pages" do
        expect(page).to have_title ("Ruby on Rails Tutorial Sample App | About Us")
     end
   end
+
+  describe 'contact page' do
+	
+  	it 'should have contact' do
+  		visit 'static_pages/contact'
+  		page.should have_selector('h1', :text => 'Contact')
+  	end
+  	it "should have title contact" do
+	  	visit '/static_pages/contact'
+	  	expect(page).to have_title ("Ruby on Rails Tutorial Sample App | Contact")
+		end
+	end
 end
