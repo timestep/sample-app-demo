@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'capybara/rails'
 
 describe "StaticPages" do
   describe "GET /static_pages" do
