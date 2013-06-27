@@ -8,4 +8,12 @@ describe "StaticPages" do
       response.status.should be(200)
     end
   end
+
+  describe 'home page' do
+  	it 'should have the content' do
+  		visit '/static_pages/home'
+  		page.should have_content('sample app')
+  		end
+  	end
+
 end
