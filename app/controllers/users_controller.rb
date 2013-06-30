@@ -19,6 +19,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def end
+  
+  end
+
+
   private
   	def new_params
   		params.require(:user).permit!
