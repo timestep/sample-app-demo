@@ -1,7 +1,5 @@
 class User < ActiveRecord::Base
 
-	attr_accessor :name, :email, :password, :password_confirmation
-  	
 	before_save { self.email = email.downcase }
 	before_save :create_remember_token
 
