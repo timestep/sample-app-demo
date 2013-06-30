@@ -7,8 +7,8 @@ gem 'bcrypt-ruby'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 	gem 'sqlite3'
-	gem 'rspec-rails'#, '2.0.0.beta.18'
-	gem 'capybara'
+	gem 'rspec-rails', '2.13.1'
+	gem 'capybara', '2.1.0'
 end
 
 group :assets do
@@ -28,9 +28,10 @@ end
 gem 'jquery-rails'
 
 group :test do
-	gem 'capybara'
+	gem 'selenium-webdriver', '2.0.0'
+ 	gem 'capybara', '2.1.0'
 	gem 'factory_girl_rails'
-	gem 'rspec-rails'#, '2.0.0.beta.18'
+	gem 'rspec-rails', '2.13.1'
  	gem 'spork'
 end
 
