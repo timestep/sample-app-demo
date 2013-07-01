@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user, only: [:edit, :update]  
+  before_action :signed_in_user, only: [:index, :edit, :update] 
   before_action :correct_user,   only: [:edit, :update]
 	
 
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page])
   end
 
  	def create
